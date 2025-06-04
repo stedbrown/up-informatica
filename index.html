@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UP! informatica di Stefano Vananti: Interventi di informatica a domicilio e sviluppo software personalizzato. Soluzioni rapide e professionali.">
+    <meta name="keywords" content="UP! informatica, Stefano Vananti, informatica domicilio, assistenza computer, sviluppo software, riparazione PC, consulenza IT, software su misura">
+    <title>UP! informatica | Assistenza IT a Domicilio e Sviluppo Software | Stefano Vananti</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script> <!-- Sostituisci con il tuo kit FontAwesome se lo usi -->
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">
+                <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-icon">
+                    <!-- Background circle -->
+                    <circle cx="16" cy="16" r="15" fill="#007AFF" stroke="#ffffff" stroke-width="2"/>
+                    
+                    <!-- Computer monitor icon -->
+                    <rect x="8" y="10" width="16" height="10" rx="1" fill="#ffffff"/>
+                    <rect x="9" y="11" width="14" height="7" fill="#007AFF"/>
+                    
+                    <!-- Stand -->
+                    <rect x="14" y="20" width="4" height="2" fill="#ffffff"/>
+                    <rect x="12" y="22" width="8" height="1" fill="#ffffff"/>
+                    
+                    <!-- UP! arrow -->
+                    <path d="M16 12L18 15L14 15Z" fill="#ffffff"/>
+                    
+                    <!-- Exclamation point -->
+                    <circle cx="16" cy="17" r="0.5" fill="#ffffff"/>
+                </svg>
+                <span class="logo-text">UP! informatica</span>
+            </a>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#services">Servizi</a></li>
+                <li><a href="#about">Chi Sono</a></li>
+                <li><a href="#contact">Contatti</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Apri menu">
+                <span class="hamburger"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container hero-content">
+                <h1>Interventi Informatici a Domicilio e Sviluppo Software</h1>
+                <p class="subtitle">Soluzioni tecnologiche rapide e su misura da UP! informatica di Stefano Vananti.</p>
+                <a href="#contact" class="cta-button">Richiedi un Preventivo</a>
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2>I Servizi di UP! informatica</h2>
+                <div class="service-grid">
+                    <article class="service-card">
+                        <i class="fas fa-tools service-icon"></i> <!-- Esempio icona, da sostituire -->
+                        <h3>Assistenza Informatica a Domicilio</h3>
+                        <p>Risoluzione problemi PC e Mac, rimozione virus, installazione software, configurazione reti e periferiche, direttamente a casa tua.</p>
+                    </article>
+                    <article class="service-card">
+                        <i class="fas fa-code service-icon"></i> <!-- Esempio icona, da sostituire -->
+                        <h3>Sviluppo Software Personalizzato</h3>
+                        <p>Creazione di applicazioni web, gestionali e soluzioni software su misura per ottimizzare i processi della tua attività.</p>
+                    </article>
+                    <article class="service-card">
+                        <i class="fas fa-laptop-medical service-icon"></i> <!-- Esempio icona, da sostituire -->
+                        <h3>Consulenza e Formazione IT</h3>
+                        <p>Consulenza strategica per le tue esigenze tecnologiche e corsi di formazione personalizzati per migliorare le tue competenze digitali.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>UP! informatica - Chi Sono</h2>
+                <p>Sono Stefano Vananti, il professionista dietro UP! informatica. Sono un giovane appassionato di tecnologia, con esperienza nell'assistenza IT a domicilio e nello sviluppo software. La mia missione con UP! informatica è fornire soluzioni efficaci, innovative e personalizzate, mettendo al centro le tue esigenze. Affidabilità, competenza e trasparenza sono i valori che guidano il mio lavoro quotidiano.</p>
+                </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contatta UP! informatica</h2>
+                <p>Hai bisogno di assistenza o vuoi discutere un progetto con UP! informatica? Compila il form sottostante o utilizza i miei contatti diretti.</p>
+                <div id="form-messages" aria-live="polite"></div> <!-- For success/error messages -->
+                <form id="contact-form" action="https://formspree.io/f/mgvyvvjw" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Oggetto:</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Messaggio:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Invia Messaggio</button>
+                </form>
+                <div class="contact-details">
+                    <p>Oppure contattami via:</p>
+                    <p><i class="fas fa-phone"></i> Telefono: <a href="tel:0768057376">0768057376</a></p>
+                    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:stefanovananti@icloud.com">stefanovananti@icloud.com</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 UP! informatica di Stefano Vananti. Tutti i diritti riservati.</p>
+            <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="cookie-policy.html">Cookie Policy</a></p>
+            <p><a href="https://github.com/stedbrown" target="_blank" rel="noopener noreferrer">Il mio GitHub</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

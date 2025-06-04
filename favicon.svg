@@ -1,0 +1,18 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="15" fill="#007AFF" stroke="#ffffff" stroke-width="2"/>
+  
+  <!-- Computer monitor icon -->
+  <rect x="8" y="10" width="16" height="10" rx="1" fill="#ffffff"/>
+  <rect x="9" y="11" width="14" height="7" fill="#007AFF"/>
+  
+  <!-- Stand -->
+  <rect x="14" y="20" width="4" height="2" fill="#ffffff"/>
+  <rect x="12" y="22" width="8" height="1" fill="#ffffff"/>
+  
+  <!-- UP! arrow -->
+  <path d="M16 12L18 15L14 15Z" fill="#ffffff"/>
+  
+  <!-- Exclamation point -->
+  <circle cx="16" cy="17" r="0.5" fill="#ffffff"/>
+</svg> 

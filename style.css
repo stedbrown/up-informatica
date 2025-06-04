@@ -1,0 +1,526 @@
+/* Apple-Inspired UI Reset e Stili Globali */
+:root {
+    --apple-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --text-color-primary: #1d1d1f; /* Apple's primary text color (near black) */
+    --text-color-secondary: #6e6e73; /* Apple's secondary text color (gray) */
+    --link-color: #0066cc; /* Apple's standard link blue */
+    --link-hover-color: #00509e;
+    --background-color-primary: #ffffff;
+    --background-color-secondary: #f5f5f7; /* Apple's light gray background */
+    --divider-color: #d2d2d7;
+    --button-bg: #007aff;
+    --button-text-color: #ffffff;
+    --button-hover-bg: #0062cc;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 2px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.05);
+    --card-hover-shadow: 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07);
+    --border-radius-general: 12px; /* Apple often uses rounded corners */
+    --border-radius-button: 8px;
+    --transition-speed: 0.25s ease-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px; /* Base font size */
+}
+
+body {
+    font-family: var(--apple-font);
+    line-height: 1.5;
+    color: var(--text-color-primary);
+    background-color: var(--background-color-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1024px; /* Common Apple container width */
+    margin: auto;
+    padding: 0 22px; /* Apple's typical padding */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--apple-font);
+    font-weight: 600; /* Apple uses slightly bolder headings */
+    margin-bottom: 0.75em;
+    color: var(--text-color-primary);
+}
+
+h1 {
+    font-size: 2.75rem; /* 44px */
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+}
+
+h2 {
+    font-size: 2rem; /* 32px */
+    text-align: center;
+    margin-bottom: 1.5em;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+}
+
+h3 {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 500;
+}
+
+p {
+    margin-bottom: 1.25em;
+    font-size: 1.0625rem; /* 17px */
+    line-height: 1.65;
+    color: var(--text-color-secondary);
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header e Navigazione - Apple Style */
+header {
+    background-color: rgba(255,255,255,0.8); /* Semi-transparent white */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 0.75rem 0; /* Slightly less padding */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--divider-color);
+    box-shadow: none;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.5rem; /* Slightly smaller */
+    font-weight: 600;
+    color: var(--text-color-primary);
+    text-decoration: none;
+}
+
+.logo:hover {
+    text-decoration: none;
+    color: var(--text-color-primary);
+}
+
+.logo-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.logo-text {
+    font-family: var(--apple-font);
+    font-weight: 600;
+    letter-spacing: -0.005em;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    margin-left: 20px; /* Slightly less margin */
+}
+
+header nav ul li a {
+    font-family: var(--apple-font);
+    font-weight: 400; /* Regular weight for nav links */
+    font-size: 0.9375rem; /* 15px */
+    color: var(--text-color-primary);
+    padding: 0.5rem 0.25rem;
+    position: relative;
+    transition: color var(--transition-speed);
+}
+
+header nav ul li a:hover {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+header nav ul li a::after {
+   display: none; /* Remove underline effect, Apple doesn't typically use this */
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.hamburger {
+    display: block;
+    width: 22px; /* Thinner hamburger */
+    height: 2px;
+    background-color: var(--text-color-primary);
+    position: relative;
+    transition: all var(--transition-speed);
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background-color: var(--text-color-primary);
+    left: 0;
+    transition: all var(--transition-speed);
+}
+
+.hamburger::before {
+    top: -7px;
+}
+
+.hamburger::after {
+    top: 7px;
+}
+
+.menu-toggle.active .hamburger {
+    background-color: transparent;
+}
+
+.menu-toggle.active .hamburger::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.menu-toggle.active .hamburger::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+/* Hero Section - Apple Style */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: var(--background-color-primary);
+    padding: 6rem 0 7rem;
+    text-align: center;
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem; /* 56px */
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 0.5em;
+    letter-spacing: -0.015em;
+    color: var(--background-color-primary);
+}
+
+.hero-content .subtitle {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 400;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 1.5em;
+    max-width: 600px; /* Constrain subtitle width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* General Button Style (Apple-like) - Applied to .cta-button */
+.cta-button {
+    display: inline-block;
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    padding: 12px 24px;
+    font-size: 1.0625rem; /* 17px */
+    font-weight: 500; /* Medium weight */
+    font-family: var(--apple-font);
+    border-radius: var(--border-radius-button);
+    text-transform: none; /* Apple buttons are not usually uppercase */
+    letter-spacing: normal;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-2px);
+    color: var(--button-text-color);
+    text-decoration: none;
+}
+
+/* Sections - Apple Style */
+.services-section, .about-section, .contact-section {
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--divider-color); /* Subtle dividers */
+}
+
+.services-section:last-of-type,
+.about-section:last-of-type,
+.contact-section:last-of-type {
+    border-bottom: none;
+}
+
+.about-section {
+    background-color: var(--background-color-secondary);
+}
+
+/* Services Section - Apple Style Cards */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius-general);
+    box-shadow: var(--card-shadow);
+    text-align: left; /* Apple cards are usually left-aligned */
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.service-icon {
+    font-size: 2rem; /* Smaller, more subtle icons */
+    color: var(--link-color); /* Use link color for icons */
+    margin-bottom: 1rem;
+    text-align: center; /* Center icon if it's alone */
+    display: block; /* Ensure it takes block for centering */
+}
+
+.service-card h3 {
+    margin-bottom: 0.5em;
+    font-size: 1.3125rem; /* 21px */
+    font-weight: 600;
+    color: var(--text-color-primary);
+}
+
+.service-card p {
+    font-size: 0.9375rem; /* 15px */
+    color: var(--text-color-secondary);
+    line-height: 1.6;
+}
+
+/* About Section - Apple Style */
+.about-section .container p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 1.1875rem; /* 19px */
+    line-height: 1.7;
+    color: var(--text-color-primary); /* Primary text for more emphasis */
+}
+
+/* Contact Section - Apple Style Form */
+.contact-section form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0; /* Remove padding, handled by groups */
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    font-size: 0.9375rem; /* 15px */
+    font-family: var(--apple-font);
+    color: var(--text-color-primary);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--divider-color);
+    border-radius: var(--border-radius-button);
+    font-family: var(--apple-font);
+    font-size: 1.0625rem; /* 17px */
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+    background-color: var(--background-color-secondary); /* Light gray input background */
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: var(--link-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0,102,204,.15); /* Subtle focus ring */
+    background-color: var(--background-color-primary);
+}
+
+.contact-section form button[type="submit"].cta-button {
+    display: block;
+    width: auto; /* Auto width for button */
+    min-width: 150px;
+    margin-top: 2rem;
+    margin-left: auto; /* Align to right if desired, or center */
+    margin-right: auto;
+}
+
+#form-messages {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: var(--border-radius-button);
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.9375rem;
+}
+
+#form-messages.success-message {
+    background-color: #e6f7ec; /* Lighter green */
+    color: #006422;
+    border: 1px solid #b7ebc9;
+}
+
+#form-messages.error-message {
+    background-color: #ffeeee; /* Lighter red */
+    color: #a80000;
+    border: 1px solid #ffcccc;
+}
+
+.contact-details {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.contact-details p {
+    font-size: 1.0625rem; /* 17px */
+    margin-bottom: 0.75rem;
+    color: var(--text-color-secondary);
+}
+
+.contact-details i {
+    margin-right: 8px;
+    color: var(--link-color);
+}
+
+/* Footer - Apple Style */
+footer {
+    background-color: var(--background-color-secondary); /* Light gray background */
+    color: var(--text-color-secondary);
+    text-align: center;
+    padding: 2.5rem 0;
+    margin-top: 0; /* Remove margin if sections have bottom border */
+    border-top: 1px solid var(--divider-color);
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+    font-size: 0.8125rem; /* 13px, Apple uses small footer text */
+}
+
+footer a {
+    color: var(--text-color-secondary);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+/* Responsive Design - Apple Style */
+@media (max-width: 768px) {
+    html {
+        font-size: 15px; /* Adjust base for smaller screens */
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: calc(100% + 1px); /* Position below header border */
+        left: 0;
+        background-color: var(--background-color-primary);
+        box-shadow: var(--card-shadow);
+        padding: 1rem 0;
+        border-top: 1px solid var(--divider-color);
+    }
+
+    header nav ul.active {
+        display: flex;
+    }
+
+    header nav ul li {
+        margin: 0.75rem 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Adjust for mobile */
+    }
+
+    .hero-content .subtitle {
+        font-size: 1.25rem; /* Adjust for mobile */
+    }
+
+    h1 {
+      font-size: 2.25rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-section form button[type="submit"].cta-button {
+        width: 100%; /* Full width on mobile */
+    }
+} 
