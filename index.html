@@ -3,20 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="UP! informatica di Stefano Vananti: Interventi di informatica a domicilio e sviluppo software personalizzato. Soluzioni rapide e professionali.">
-    <meta name="keywords" content="UP! informatica, Stefano Vananti, informatica domicilio, assistenza computer, sviluppo software, riparazione PC, consulenza IT, software su misura">
-    <title>UP! informatica | Assistenza IT a Domicilio e Sviluppo Software | Stefano Vananti</title>
+    <meta name="description" content="UP! informatica di Stefano Vananti: Assistenza informatica a domicilio a Biasca e Valli del Ticino. Riparazione PC, sviluppo software, consulenza IT. Servizio rapido e professionale in tutta la regione.">
+    <meta name="keywords" content="informatica Biasca, assistenza computer Valli del Ticino, riparazione PC Biasca, sviluppo software Ticino, consulenza IT Biasca, informatica domicilio Ticino, Stefano Vananti, UP informatica, assistenza computer Leventina, riparazione PC Riviera">
+    <meta name="geo.region" content="CH-TI">
+    <meta name="geo.placename" content="Biasca, Ticino, Svizzera">
+    <meta name="geo.position" content="46.3569;8.9696">
+    <meta name="ICBM" content="46.3569, 8.9696">
+    <title>UP! informatica | Assistenza IT a Domicilio Biasca e Valli del Ticino | Stefano Vananti</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://up-informatica.vercel.app/">
+    <meta property="og:title" content="UP! informatica | Assistenza IT a Domicilio Biasca e Valli del Ticino">
+    <meta property="og:description" content="Assistenza informatica a domicilio e sviluppo software personalizzato a Biasca e Valli del Ticino. Servizio rapido e professionale per privati e aziende.">
+    <meta property="og:image" content="https://up-informatica.vercel.app/favicon.svg">
+    <meta property="og:locale" content="it_CH">
+    <meta property="og:site_name" content="UP! informatica">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://up-informatica.vercel.app/">
+    <meta property="twitter:title" content="UP! informatica | Assistenza IT a Domicilio Biasca e Valli del Ticino">
+    <meta property="twitter:description" content="Assistenza informatica a domicilio e sviluppo software personalizzato a Biasca e Valli del Ticino. Servizio rapido e professionale per privati e aziende.">
+    <meta property="twitter:image" content="https://up-informatica.vercel.app/favicon.svg">
+    
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Stefano Vananti">
+    <meta name="language" content="Italian">
+    <meta name="revisit-after" content="7 days">
+    <link rel="canonical" href="https://up-informatica.vercel.app/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
     
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script> <!-- Sostituisci con il tuo kit FontAwesome se lo usi -->
+    
+    <!-- Critical CSS for above-the-fold content -->
+    <style>
+        :root {
+            --apple-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --text-color-primary: #1d1d1f;
+            --text-color-secondary: #6e6e73;
+            --link-color: #0066cc;
+            --background-color-primary: #ffffff;
+            --background-color-secondary: #f5f5f7;
+            --divider-color: #d2d2d7;
+            --button-bg: #007aff;
+            --button-text-color: #ffffff;
+            --button-hover-bg: #0062cc;
+            --border-radius-button: 8px;
+            --transition-speed: 0.25s ease-out;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: var(--apple-font); line-height: 1.5; color: var(--text-color-primary); background-color: var(--background-color-primary); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        .container { max-width: 1024px; margin: auto; padding: 0 22px; }
+        header { background-color: rgba(255,255,255,0.8); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); padding: 0.75rem 0; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--divider-color); }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 8px; font-size: 1.5rem; font-weight: 600; color: var(--text-color-primary); text-decoration: none; }
+        .hero-section { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; color: var(--background-color-primary); padding: 6rem 0 7rem; text-align: center; min-height: auto; display: flex; align-items: center; justify-content: center; }
+        .hero-content h1 { font-size: 3.5rem; font-weight: 700; line-height: 1.1; margin-bottom: 0.5em; letter-spacing: -0.015em; color: var(--background-color-primary); }
+        .hero-content .subtitle { font-size: 1.5rem; font-weight: 400; color: rgba(255,255,255,0.85); margin-bottom: 1.5em; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-button { display: inline-block; background-color: var(--button-bg); color: var(--button-text-color); padding: 12px 24px; font-size: 1.0625rem; font-weight: 500; font-family: var(--apple-font); border-radius: var(--border-radius-button); text-transform: none; letter-spacing: normal; transition: background-color var(--transition-speed), transform var(--transition-speed); box-shadow: none; border: none; cursor: pointer; text-decoration: none; }
+        .cta-button:hover { background-color: var(--button-hover-bg); transform: translateY(-2px); color: var(--button-text-color); text-decoration: none; }
+    </style>
+    
+    <!-- Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "UP! informatica",
+        "description": "Assistenza informatica a domicilio e sviluppo software personalizzato a Biasca e Valli del Ticino",
+        "url": "https://up-informatica.vercel.app",
+        "telephone": "+41768057376",
+        "email": "stefanovananti@icloud.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Via F. Borromini 13",
+            "addressLocality": "Biasca",
+            "addressRegion": "Ticino",
+            "postalCode": "6710",
+            "addressCountry": "CH"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "46.3569",
+            "longitude": "8.9696"
+        },
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Biasca"
+            },
+            {
+                "@type": "City", 
+                "name": "Leventina"
+            },
+            {
+                "@type": "City",
+                "name": "Riviera"
+            },
+            {
+                "@type": "City",
+                "name": "Valli del Ticino"
+            }
+        ],
+        "serviceArea": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": "46.3569",
+                "longitude": "8.9696"
+            },
+            "geoRadius": "50000"
+        },
+        "founder": {
+            "@type": "Person",
+            "name": "Stefano Vananti"
+        },
+        "foundingDate": "2024",
+        "priceRange": "$$",
+        "openingHours": "Mo-Fr 08:00-18:00",
+        "sameAs": [
+            "https://github.com/stedbrown"
+        ]
+    }
+    </script>
 </head>
 <body>
     <header>
@@ -42,11 +164,11 @@
                 </svg>
                 <span class="logo-text">UP! informatica</span>
             </a>
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#services">Servizi</a></li>
-                <li><a href="#about">Chi Sono</a></li>
-                <li><a href="#contact">Contatti</a></li>
+            <ul role="menubar">
+                <li role="none"><a href="#hero" role="menuitem">Home</a></li>
+                <li role="none"><a href="#services" role="menuitem">Servizi</a></li>
+                <li role="none"><a href="#about" role="menuitem">Chi Sono</a></li>
+                <li role="none"><a href="#contact" role="menuitem">Contatti</a></li>
             </ul>
             <button class="menu-toggle" aria-label="Apri menu">
                 <span class="hamburger"></span>
@@ -57,30 +179,30 @@
     <main>
         <section id="hero" class="hero-section">
             <div class="container hero-content">
-                <h1>Interventi Informatici a Domicilio e Sviluppo Software</h1>
-                <p class="subtitle">Soluzioni tecnologiche rapide e su misura da UP! informatica di Stefano Vananti.</p>
+                <h1>Assistenza Informatica a Domicilio a Biasca e Valli del Ticino</h1>
+                <p class="subtitle">Soluzioni tecnologiche rapide e professionali per privati e aziende in tutta la regione. UP! informatica di Stefano Vananti - il tuo partner IT di fiducia.</p>
                 <a href="#contact" class="cta-button">Richiedi un Preventivo</a>
             </div>
         </section>
 
         <section id="services" class="services-section">
             <div class="container">
-                <h2>I Servizi di UP! informatica</h2>
+                <h2>Servizi Informatici a Biasca e Valli del Ticino</h2>
                 <div class="service-grid">
                     <article class="service-card">
                         <i class="fas fa-tools service-icon"></i> <!-- Esempio icona, da sostituire -->
                         <h3>Assistenza Informatica a Domicilio</h3>
-                        <p>Risoluzione problemi PC e Mac, rimozione virus, installazione software, configurazione reti e periferiche, direttamente a casa tua.</p>
+                        <p>Risoluzione problemi PC e Mac, rimozione virus, installazione software, configurazione reti e periferiche. Servizio a domicilio in tutta la regione di Biasca, Leventina e Riviera.</p>
                     </article>
                     <article class="service-card">
                         <i class="fas fa-code service-icon"></i> <!-- Esempio icona, da sostituire -->
                         <h3>Sviluppo Software Personalizzato</h3>
-                        <p>Creazione di applicazioni web, gestionali e soluzioni software su misura per ottimizzare i processi della tua attività.</p>
+                        <p>Creazione di applicazioni web, gestionali e soluzioni software su misura per aziende e privati del Ticino. Ottimizzazione dei processi digitali per la tua attività.</p>
                     </article>
                     <article class="service-card">
                         <i class="fas fa-laptop-medical service-icon"></i> <!-- Esempio icona, da sostituire -->
                         <h3>Consulenza e Formazione IT</h3>
-                        <p>Consulenza strategica per le tue esigenze tecnologiche e corsi di formazione personalizzati per migliorare le tue competenze digitali.</p>
+                        <p>Consulenza strategica per le tue esigenze tecnologiche e corsi di formazione personalizzati. Supporto digitale per privati e aziende delle Valli del Ticino.</p>
                     </article>
                 </div>
             </div>
@@ -88,34 +210,46 @@
 
         <section id="about" class="about-section">
             <div class="container">
-                <h2>UP! informatica - Chi Sono</h2>
-                <p>Sono Stefano Vananti, il professionista dietro UP! informatica. Sono un giovane appassionato di tecnologia, con esperienza nell'assistenza IT a domicilio e nello sviluppo software. La mia missione con UP! informatica è fornire soluzioni efficaci, innovative e personalizzate, mettendo al centro le tue esigenze. Affidabilità, competenza e trasparenza sono i valori che guidano il mio lavoro quotidiano.</p>
+                <h2>UP! informatica - Il Tuo Partner IT a Biasca</h2>
+                <p>Sono Stefano Vananti, il professionista dietro UP! informatica, con sede a Biasca. Sono un giovane appassionato di tecnologia, con esperienza nell'assistenza IT a domicilio e nello sviluppo software. Servo con passione privati e aziende in tutta la regione delle Valli del Ticino, dalla Leventina alla Riviera. La mia missione è fornire soluzioni tecnologiche efficaci, innovative e personalizzate, mettendo al centro le esigenze specifiche del territorio ticinese. Affidabilità, competenza e trasparenza sono i valori che guidano il mio lavoro quotidiano al servizio della comunità locale.</p>
                 </div>
         </section>
 
         <section id="contact" class="contact-section">
             <div class="container">
-                <h2>Contatta UP! informatica</h2>
-                <p>Hai bisogno di assistenza o vuoi discutere un progetto con UP! informatica? Compila il form sottostante o utilizza i miei contatti diretti.</p>
+                <h2>Contatta UP! informatica a Biasca</h2>
+                <p>Hai bisogno di assistenza informatica a domicilio a Biasca o nelle Valli del Ticino? Vuoi discutere un progetto di sviluppo software? Compila il form sottostante o utilizza i miei contatti diretti. Servizio rapido e professionale in tutta la regione.</p>
                 <div id="form-messages" aria-live="polite"></div> <!-- For success/error messages -->
-                <form id="contact-form" action="https://formspree.io/f/mgvyvvjw" method="POST">
-                    <div class="form-group">
-                        <label for="name">Nome:</label>
-                        <input type="text" id="name" name="name" required>
+                <form id="contact-form" action="https://formspree.io/f/mgvyvvjw" method="POST" role="form" aria-label="Modulo di contatto" class="clean-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required aria-describedby="name-help" autocomplete="name" placeholder=" ">
+                            <label for="name">Nome completo</label>
+                            <div id="name-help" class="sr-only">Inserisci il tuo nome completo</div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required aria-describedby="email-help" autocomplete="email" placeholder=" ">
+                            <label for="email">Indirizzo email</label>
+                            <div id="email-help" class="sr-only">Inserisci un indirizzo email valido</div>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="text" id="subject" name="subject" required aria-describedby="subject-help" placeholder=" ">
+                        <label for="subject">Oggetto del messaggio</label>
+                        <div id="subject-help" class="sr-only">Descrivi brevemente l'argomento della tua richiesta</div>
                     </div>
                     <div class="form-group">
-                        <label for="subject">Oggetto:</label>
-                        <input type="text" id="subject" name="subject" required>
+                        <textarea id="message" name="message" rows="4" required aria-describedby="message-help" placeholder=" "></textarea>
+                        <label for="message">Messaggio</label>
+                        <div id="message-help" class="sr-only">Descrivi in dettaglio la tua richiesta o il problema che riscontri</div>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Messaggio:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="cta-button">Invia Messaggio</button>
+                    <button type="submit" class="cta-button form-submit" aria-describedby="submit-help">
+                        <span>Invia Messaggio</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 21L23 12L2 3V10L17 12L2 14V21Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <div id="submit-help" class="sr-only">Clicca per inviare il tuo messaggio</div>
                 </form>
                 <div class="contact-details">
                     <p>Oppure contattami via:</p>
@@ -135,5 +269,57 @@
     </footer>
 
     <script src="script.js"></script>
+    
+    <!-- Load CSS asynchronously -->
+    <script>
+        // Load CSS asynchronously for better performance
+        function loadCSS(href, before, media) {
+            var doc = window.document;
+            var ss = doc.createElement("link");
+            var ref;
+            if (before) {
+                ref = before;
+            } else {
+                var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+                ref = refs[refs.length - 1];
+            }
+            var sheets = doc.styleSheets;
+            ss.rel = "stylesheet";
+            ss.href = href;
+            ss.media = "only x";
+            function ready(cb) {
+                if (doc.body) cb();
+                else setTimeout(function() { ready(cb); });
+            }
+            ready(function() {
+                ref.parentNode.insertBefore(ss, (before ? ref : ref.nextSibling));
+            });
+            var onloadcssdefined = function(cb) {
+                var resolvedHref = ss.href;
+                var i = sheets.length;
+                while (i--) {
+                    if (sheets[i].href === resolvedHref) {
+                        return cb();
+                    }
+                }
+                setTimeout(function() { onloadcssdefined(cb); });
+            };
+            function loadCB() {
+                if (ss.addEventListener) {
+                    ss.removeEventListener("load", loadCB);
+                }
+                ss.media = media || "all";
+            }
+            if (ss.addEventListener) {
+                ss.addEventListener("load", loadCB);
+            }
+            ss.onloadcssdefined = onloadcssdefined;
+            onloadcssdefined(loadCB);
+            return ss;
+        }
+        
+        // Load main CSS
+        loadCSS("style.css");
+    </script>
 </body>
 </html> 
