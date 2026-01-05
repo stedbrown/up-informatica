@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "up-informatica.vercel.app"
+        }
+      ],
+      "destination": "https://up-informatica.ch/$1",
+      "permanent": true
+    }
+  ]
+}
