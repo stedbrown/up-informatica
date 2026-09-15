@@ -21,7 +21,18 @@ services.push(
 const logoData=JSON.parse(readFileSync('node_modules/@iconify-json/logos/icons.json','utf8'));
 function techLogo(name){const icon=logoData.icons[name];if(!icon)throw new Error('Missing logo: '+name);return '<svg aria-hidden="true" focusable="false" viewBox="0 0 '+(icon.width||logoData.width||24)+' '+(icon.height||logoData.height||24)+'">'+icon.body+'</svg>';}
 const techStrip='<section class="technology-strip" aria-label="Tecnologie e strumenti"><div class="wrap"><div class="technology-inner"><p class="technology-intro">Un aiuto con gli strumenti<br>che usi ogni giorno.</p><div class="technology-list">'+[['microsoft-icon','Microsoft 365'],['microsoft-teams','Microsoft Teams'],['apple','Apple'],['microsoft-windows-icon','Windows'],['microsoft-onedrive','OneDrive']].map(([icon,label])=>'<span class="technology-item">'+techLogo(icon)+'<span>'+label+'</span></span>').join('')+'</div></div><p class="technology-note">Assistenza e configurazione. I marchi identificano le tecnologie trattate.</p></div></section>';
-function serviceSymbol(slug){if(slug==='videosorveglianza-ticino')return '<svg class="service-symbol" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m3 6 13-3 4 8-13 3zM10 14v5H5m9-7 3 5 4-2-3-5"/><path d="M3 6 1 7l4 8 2-1"/></svg>';if(slug==='voip-cloud-microsoft-teams-ticino')return '<svg class="service-symbol" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3H3v4c0 8 6 14 14 14h4v-4l-5-2-2 2a14 14 0 0 1-7-7l2-2zM14 3a7 7 0 0 1 7 7m-7-3a3 3 0 0 1 3 3"/></svg>';return '';}
+function serviceSymbol(slug){
+ const shapes={
+  'assistenza-computer-domicilio-ticino':'<rect x="3" y="4" width="18" height="13" rx="2"/><path d="M12 17v4m-4 0h8"/>',
+  'assistenza-informatica-aziende-ticino':'<rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12a22 22 0 0 0 18 0m-9 0v3"/>',
+  'wifi-reti-backup-ticino':'<path d="M2 8a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0m-11 4a6 6 0 0 1 8 0"/><circle cx="12" cy="20" r="1"/>',
+  'software-automazioni-ia-ticino':'<path d="m8 6-6 6 6 6m8-12 6 6-6 6M14 3l-4 18"/>',
+  'videosorveglianza-ticino':'<path d="m3 6 13-3 4 8-13 3zM10 14v5H5m9-7 3 5 4-2-3-5"/><path d="M3 6 1 7l4 8 2-1"/>',
+  'voip-cloud-microsoft-teams-ticino':'<path d="M6 3H3v4c0 8 6 14 14 14h4v-4l-5-2-2 2a14 14 0 0 1-7-7l2-2zM14 3a7 7 0 0 1 7 7m-7-3a3 3 0 0 1 3 3"/>'
+ };
+ if(!shapes[slug])return '';
+ return '<svg class="service-symbol" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">'+shapes[slug]+'</svg>';
+}
 const brand='<a class="brand" href="/" aria-label="UP! informatica, home"><span class="brand-mark">up<span>!</span></span><span class="brand-name">informatica<span>Stefano Vananti</span></span></a>';
 function header(){return '<a class="skip" href="#main">Vai al contenuto</a><header><div class="wrap nav">'+brand+'<button class="menu-toggle" aria-controls="navigation" aria-expanded="false">Menu <span aria-hidden="true">+</span></button><nav id="navigation" aria-label="Navigazione principale"><a href="/#services">Servizi</a><a href="/assistenza-domicilio-ticino.html">Il territorio</a><a href="/#about">Chi sono</a><a class="nav-contact" href="/#contact">Parliamone '+arrow+'</a></nav></div></header>'}
 function footer(){return '<footer><div class="wrap footer-top">'+brand+'<p>La tecnologia, dalla tua parte.<br>A casa tua. Nella tua azienda.</p><a href="tel:+41768057376">076 805 73 76 '+arrow+'</a></div><div class="wrap footer-bottom"><span>© '+new Date().getFullYear()+' UP! informatica di Stefano Vananti · Ticino, Svizzera</span><div><a href="/privacy-policy.html">Privacy</a><a href="/cookie-policy.html">Cookie</a><a href="/#contact">Contatti</a></div></div></footer>'}
