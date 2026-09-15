@@ -23,7 +23,9 @@ La consegna effettiva dipende dall'account Formspree e va verificata dal titolar
 
 ## SEO
 
-Home, quattro pagine servizio e una pagina territoriale hanno contenuti distinti, canonical, descrizioni e dati strutturati.
+Home, sei pagine servizio e una pagina territoriale hanno contenuti distinti, canonical, descrizioni e dati strutturati.
+Le pagine servizio includono videosorveglianza e VoIP cloud con Microsoft Teams. La disponibilità della telefonia dipende da licenze e operatore.
+I loghi Microsoft, Teams, Apple, Windows e OneDrive provengono dalla raccolta Iconify Logos e identificano le tecnologie trattate, senza dichiarare partnership.
 Non vengono dichiarati uffici, recensioni, prezzi o risultati non verificati.
 Le vecchie URL privacy e cookie restano disponibili. Gli ancoraggi home hero/services/about/contact sono conservati.
 La sitemap non inventa date di aggiornamento.
