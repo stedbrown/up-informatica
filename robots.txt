@@ -1,12 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://up-informatica.ch/sitemap.xml
-
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
-
-# Disallow admin or private areas (if any)
-# Disallow: /admin/
-# Disallow: /private/
+Sitemap: https://www.up-informatica.ch/sitemap.xml

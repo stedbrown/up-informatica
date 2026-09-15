@@ -1,15 +1,11 @@
 {
+  "buildCommand": "npm run build",
+  "outputDirectory": "public",
   "redirects": [
-    {
-      "source": "/(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "up-informatica.vercel.app"
-        }
-      ],
-      "destination": "https://up-informatica.ch/$1",
-      "permanent": true
-    }
+    {"source": "/(.*)", "has": [{"type": "host", "value": "up-informatica.vercel.app"}], "destination": "https://www.up-informatica.ch/$1", "permanent": true},
+    {"source": "/index.html", "destination": "/", "permanent": true}
+  ],
+  "headers": [
+    {"source": "/(.*)", "headers": [{"key":"X-Content-Type-Options","value":"nosniff"},{"key":"Referrer-Policy","value":"strict-origin-when-cross-origin"}]}
   ]
 }

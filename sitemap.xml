@@ -1,21 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://up-informatica.ch/</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://up-informatica.ch/privacy-policy.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.3</priority>
-    </url>
-    <url>
-        <loc>https://up-informatica.ch/cookie-policy.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.3</priority>
-    </url>
-</urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://www.up-informatica.ch/</loc></url><url><loc>https://www.up-informatica.ch/assistenza-computer-domicilio-ticino.html</loc></url><url><loc>https://www.up-informatica.ch/assistenza-informatica-aziende-ticino.html</loc></url><url><loc>https://www.up-informatica.ch/wifi-reti-backup-ticino.html</loc></url><url><loc>https://www.up-informatica.ch/software-automazioni-ia-ticino.html</loc></url><url><loc>https://www.up-informatica.ch/assistenza-domicilio-ticino.html</loc></url><url><loc>https://www.up-informatica.ch/privacy-policy.html</loc></url><url><loc>https://www.up-informatica.ch/cookie-policy.html</loc></url></urlset>
