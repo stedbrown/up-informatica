@@ -1,4 +1,20 @@
 document.documentElement.classList.add('js');
+const carousel = document.querySelector('.technology-strip');
+if (carousel) {
+  const toggle = carousel.querySelector('.carousel-toggle');
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let paused = false;
+  function updateCarousel() {
+    carousel.classList.toggle('is-moving', !motion.matches);
+    carousel.classList.toggle('is-paused', paused);
+    toggle.hidden = motion.matches;
+    toggle.setAttribute('aria-pressed', String(paused));
+    toggle.querySelector('span').textContent = paused ? 'Riprendi scorrimento' : 'Pausa scorrimento';
+  }
+  toggle.addEventListener('click', () => { paused = !paused; updateCarousel(); });
+  motion.addEventListener('change', updateCarousel);
+  updateCarousel();
+}
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#navigation');
 function closeMenu() {
